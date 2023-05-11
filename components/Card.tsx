@@ -9,23 +9,14 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ subject, author, content }) => {
   const draggableRef = useRef<HTMLDivElement>(null);
-  const [maxZIndex, setMaxZIndex] = useState<number>(1);
 
-  const handleClick = () => {
-    setMaxZIndex((prevMaxZIndex) => prevMaxZIndex + 1);
-  };
-
-  const handleDrag = () => {
-    setMaxZIndex((prevMaxZIndex) => prevMaxZIndex + 1);
-  };
+  
 
   return (
-    <Draggable nodeRef={draggableRef} onStart={handleClick} onDrag={handleDrag}>
+    <Draggable nodeRef={draggableRef} >
       <div
-        onClick={handleClick}
         className="max-w-sm rounded overflow-hidden shadow-lg bg-white"
         ref={draggableRef}
-        style={{ zIndex: maxZIndex }}
       >
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{subject}</div>
