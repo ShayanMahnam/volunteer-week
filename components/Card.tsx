@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import Draggable, { DraggableProps } from "react-draggable";
+import Draggable from "react-draggable";
 
 type CardProps = {
   subject: string;
@@ -9,18 +9,23 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ subject, author, content }) => {
   const draggableRef = useRef<HTMLDivElement>(null);
-  const [zIndex, setZIndex] = useState<number>(1);
+  const [maxZIndex, setMaxZIndex] = useState<number>(1);
 
-  const handleStart = () => {
-    setZIndex((prevZIndex) => prevZIndex + 1);
+  const handleClick = () => {
+    setMaxZIndex((prevMaxZIndex) => prevMaxZIndex + 1);
+  };
+
+  const handleDrag = () => {
+    setMaxZIndex((prevMaxZIndex) => prevMaxZIndex + 1);
   };
 
   return (
-    <Draggable nodeRef={draggableRef} onStart={handleStart}>
+    <Draggable nodeRef={draggableRef} onStart={handleClick} onDrag={handleDrag}>
       <div
+        onClick={handleClick}
         className="max-w-sm rounded overflow-hidden shadow-lg bg-white"
         ref={draggableRef}
-        style={{ zIndex }}
+        style={{ zIndex: maxZIndex }}
       >
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{subject}</div>
