@@ -1,12 +1,14 @@
 import React from "react";
 import { Rnd } from "react-rnd";
 import cardsData from "../cards.json";
+import { DraggableEvent } from "react-draggable";
 
 const DragAndDropArea: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = React.useState(0);
   const [containerHeight, setContainerHeight] = React.useState(0);
   const [selectedCard, setSelectedCard] = React.useState<number | null>(null);
+  const [maxZIndex, setMaxZIndex] = React.useState(cardsData.length);
 
   React.useEffect(() => {
     if (containerRef.current) {
@@ -15,7 +17,16 @@ const DragAndDropArea: React.FC = () => {
     }
   }, []);
 
-  const handleCardClick = (index: number) => {
+  const handleCardClick = (
+    event: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>,
+    index: number
+  ) => {
+    const clickedCard = event.currentTarget as HTMLElement;
+    const newZIndex = maxZIndex + 1;
+
+    setMaxZIndex(newZIndex);
+    clickedCard.style.zIndex = newZIndex.toString();
+
     if (selectedCard === index) {
       // if the same card is clicked twice, unselect it
       setSelectedCard(null);
@@ -24,7 +35,11 @@ const DragAndDropArea: React.FC = () => {
     }
   };
 
-  const handleCardDragStart = (index: number) => {
+  const handleCardDragStart = (event: DraggableEvent, index: number) => {
+    const clickedCard = event.currentTarget as HTMLElement;
+    const newZIndex = maxZIndex + 1;
+    setMaxZIndex(newZIndex);
+    clickedCard.style.zIndex = newZIndex.toString();
     setSelectedCard(index);
   };
 
@@ -32,7 +47,7 @@ const DragAndDropArea: React.FC = () => {
     setSelectedCard(null);
   };
 
-  const cardWidth = 250;
+  const cardWidth = 350;
   const cardHeight = 150;
 
   return (
@@ -40,7 +55,7 @@ const DragAndDropArea: React.FC = () => {
       ref={containerRef}
       className="relative h-screen w-full border-1 border-black"
     >
-      <h2 className="p-2">Trainees Messages</h2>
+      <h2 className="p-2  text-center text-3xl">Trainees Messages</h2>
       {containerWidth === 0 || containerHeight === 0 ? (
         <div>Loading...</div>
       ) : (
@@ -60,17 +75,29 @@ const DragAndDropArea: React.FC = () => {
                 height: cardHeight,
               }}
               bounds="parent"
-              onClick={() => handleCardClick(index)}
-              onDragStart={() => handleCardDragStart(index)}
+              onClick={(event: React.MouseEvent<HTMLDivElement>) =>
+                handleCardClick(event, index)
+              }
+              onTouchStart={(event: React.TouchEvent<HTMLDivElement>) =>
+                handleCardClick(event, index)
+              }
+              onTouchEnd={(event: React.TouchEvent<HTMLDivElement>) =>
+                handleCardClick(event, index)
+              }
+              onDragStart={(event: DraggableEvent) =>
+                handleCardDragStart(event, index)
+              }
               onDragStop={handleCardDragStop}
               style={{
-                zIndex: selectedCard === index ? 1 : 0,
+                zIndex: index,
               }}
             >
-              <div className="bg-white border-1 border-black p-5 shadow-md">
-                <h3 className="text-lg font-bold mb-2">{card.subject}</h3>
-                <p className="text-sm">{card.content}</p>
-                <p className="text-sm mt-2 text-gray-500">{card.author}</p>
+              <div className="card">
+                <div className="card_text">
+                  <p>{card.subject}</p>
+                  <p>{card.content}</p>
+                  <p className="author">{card.author}</p>
+                </div>
               </div>
             </Rnd>
           );
