@@ -55,7 +55,6 @@ const DragAndDropArea: React.FC = () => {
       ref={containerRef}
       className="relative h-screen w-full border-1 border-black"
     >
-      <h2 className="p-2  text-center text-3xl">Trainees Messages</h2>
       {containerWidth === 0 || containerHeight === 0 ? (
         <div>Loading...</div>
       ) : (
@@ -92,7 +91,7 @@ const DragAndDropArea: React.FC = () => {
                 zIndex: index,
               }}
             >
-              <div className="card">
+              <div className="card shadow-xl">
                 <div className="card_text">
                   <p>{card.subject}</p>
                   <p>{card.content}</p>

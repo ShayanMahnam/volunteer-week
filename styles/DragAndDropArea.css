@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400");
 @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   margin-bottom: 75px;
   padding: 0 20vw;
@@ -13,6 +19,7 @@ h1 {
   min-width: 350px;
   margin: 0 auto;
   -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0,0,0);
 }
 .card .card_text {
   position: relative;
