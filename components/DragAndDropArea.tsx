@@ -58,7 +58,7 @@ const DragAndDropArea: React.FC = () => {
       {containerWidth === 0 || containerHeight === 0 ? (
         <div>Loading...</div>
       ) : (
-        cardsData.map((card, index) => {
+        cardsData.map((card) => {
           const maxWidth = containerWidth - cardWidth;
           const maxHeight = containerHeight - cardHeight;
           const x = Math.floor(Math.random() * maxWidth);
@@ -66,7 +66,7 @@ const DragAndDropArea: React.FC = () => {
 
           return (
             <Rnd
-              key={index}
+              key={card.id}
               default={{
                 x,
                 y,
@@ -75,23 +75,23 @@ const DragAndDropArea: React.FC = () => {
               }}
               bounds="parent"
               onClick={(event: React.MouseEvent<HTMLDivElement>) =>
-                handleCardClick(event, index)
+                handleCardClick(event, card.id)
               }
               onTouchStart={(event: React.TouchEvent<HTMLDivElement>) =>
-                handleCardClick(event, index)
+                handleCardClick(event, card.id)
               }
               onTouchEnd={(event: React.TouchEvent<HTMLDivElement>) =>
-                handleCardClick(event, index)
+                handleCardClick(event, card.id)
               }
               onDragStart={(event: DraggableEvent) =>
-                handleCardDragStart(event, index)
+                handleCardDragStart(event, card.id)
               }
               onDragStop={handleCardDragStop}
               style={{
-                zIndex: index,
+                zIndex: card.id,
               }}
             >
-              <div className="card shadow-xl">
+              <div className={`card shadow-xl ${card.color}`}>
                 <div className="card_text">
                   <p>{card.subject}</p>
                   <p>{card.content}</p>
