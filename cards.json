@@ -4,41 +4,41 @@
     "subject": "To all volunteers",
     "author": "John Doe",
     "content": "This is some example content for Card 1. This is some example content for Card 1. This is some example content for Card 1.",
-    "color":"bg-white"
+    "color":"card-bg-white"
   },
   {
     "id": 2,
     "subject": "Card 2",
     "author": "Jane Doe",
     "content": "This is some example content for Card 2.",
-    "color": "bg-green"
+    "color": "card-bg-green"
   },
   {
     "id": 3,
     "subject": "Card 3",
     "author": "Bob Smith",
     "content": "This is some example content for Card 3.",
-    "color": "bg-pink"
+    "color": "card-bg-pink"
   },
   {
     "id": 4,
     "subject": "Card 4",
     "author": "Alice Smith",
     "content": "This is some example content for Card 4. This is some example content for Card 4.",
-    "color": "bg-yellow"
+    "color": "card-bg-yellow"
   },
   {
     "id": 5,
     "subject": "Card 5",
     "author": "Mike Johnson",
     "content": "This is some example content for Card 5.",
-    "color": "bg-blue"
+    "color": "card-bg-blue"
   },
   {
     "id": 6,
     "subject": "Card 6",
     "author": "Mike Johnson",
     "content": "This is some example content for Card 6. This is some example content for Card 6. This is some example content for Card 6. This is some example content for Card 6.",
-    "color": "bg-purple"
+    "color": "card-bg-purple"
   }
 ]

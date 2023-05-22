@@ -5,7 +5,10 @@ import Drawer from "@/components/Drawer";
 export default function Home() {
   return (
     <>
-      <Drawer />
+      <div>
+        <Drawer />
+      </div>
+
       <Carousel />
       <h2 className="p-2 text-center text-3xl text-black">Trainees Messages</h2>
       <DragAndDropArea />

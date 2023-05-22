@@ -48,32 +48,32 @@ h1 {
   margin: 0;
 }
 
-.bg-white {
+.card-bg-white {
   background: #ffff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
-.bg-green {
+.card-bg-green {
   background: #c1ffd6 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
-.bg-pink {
+.card-bg-pink {
   background: #ffddf0 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
-.bg-yellow {
+.card-bg-yellow {
   background: #ffe88d linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
-.bg-blue {
+.card-bg-blue {
   background: #b0e4ff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
-.bg-purple {
+.card-bg-purple {
   background: #cfc0ff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
