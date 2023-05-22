@@ -38,7 +38,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/1_tct4vb.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/1.webp")',
             }}
           ></div>
         </div>

@@ -1,32 +1,44 @@
 [
   {
-    "subject": "Card 1",
+    "id": 1,
+    "subject": "To all volunteers",
     "author": "John Doe",
-    "content": "This is some example content for Card 1. This is some example content for Card 1. This is some example content for Card 1."
+    "content": "This is some example content for Card 1. This is some example content for Card 1. This is some example content for Card 1.",
+    "color":"bg-white"
   },
   {
+    "id": 2,
     "subject": "Card 2",
     "author": "Jane Doe",
-    "content": "This is some example content for Card 2."
+    "content": "This is some example content for Card 2.",
+    "color": "bg-green"
   },
   {
+    "id": 3,
     "subject": "Card 3",
     "author": "Bob Smith",
-    "content": "This is some example content for Card 3."
+    "content": "This is some example content for Card 3.",
+    "color": "bg-pink"
   },
   {
+    "id": 4,
     "subject": "Card 4",
     "author": "Alice Smith",
-    "content": "This is some example content for Card 4. This is some example content for Card 4."
+    "content": "This is some example content for Card 4. This is some example content for Card 4.",
+    "color": "bg-yellow"
   },
   {
+    "id": 5,
     "subject": "Card 5",
     "author": "Mike Johnson",
-    "content": "This is some example content for Card 5."
+    "content": "This is some example content for Card 5.",
+    "color": "bg-blue"
   },
   {
+    "id": 6,
     "subject": "Card 6",
     "author": "Mike Johnson",
-    "content": "This is some example content for Card 6. This is some example content for Card 6. This is some example content for Card 6. This is some example content for Card 6."
+    "content": "This is some example content for Card 6. This is some example content for Card 6. This is some example content for Card 6. This is some example content for Card 6.",
+    "color": "bg-purple"
   }
 ]

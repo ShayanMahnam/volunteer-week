@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400");
 @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ h1 {
   min-width: 350px;
   margin: 0 auto;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 .card .card_text {
   position: relative;
@@ -28,8 +28,6 @@ h1 {
   border: none;
   border-radius: 0 20px 20px 0;
   font: 20px "Shadows Into Light", cursive;
-  background: #ffff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
-    25px / 100% 30px;
 }
 .card .card_text:after {
   position: absolute;
@@ -49,3 +47,34 @@ h1 {
   text-align: end;
   margin: 0;
 }
+
+.bg-white {
+  background: #ffff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+    25px / 100% 30px;
+}
+
+.bg-green {
+  background: #c1ffd6 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+    25px / 100% 30px;
+}
+
+.bg-pink {
+  background: #ffddf0 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+    25px / 100% 30px;
+}
+
+.bg-yellow {
+  background: #ffe88d linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+    25px / 100% 30px;
+}
+
+.bg-blue {
+  background: #b0e4ff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+    25px / 100% 30px;
+}
+
+.bg-purple {
+  background: #cfc0ff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+    25px / 100% 30px;
+}
+
