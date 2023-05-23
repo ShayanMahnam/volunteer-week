@@ -4,5 +4,14 @@
 
 body {
   background-image: linear-gradient(to bottom, #f7fafc, #edf2f7);
-  background-image: url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684437038/volunteers/wall-bg_bhwioh.webp");
+  background-image: url("/media/pictures/wall-bg.webp");
+}
+
+.rope {
+  background-image: url("/media/pictures/rope.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 200px;
 }

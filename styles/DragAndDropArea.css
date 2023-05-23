@@ -54,27 +54,26 @@ h1 {
 }
 
 .card-bg-green {
-  background: #c1ffd6 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+  background: #c8f4d7 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
 .card-bg-pink {
-  background: #ffddf0 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+  background: #ffe1f3 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
 .card-bg-yellow {
-  background: #ffe88d linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+  background: #faefbf linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
 .card-bg-blue {
-  background: #b0e4ff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+  background: #c5e9fc linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
 .card-bg-purple {
-  background: #cfc0ff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+  background: #dacefe linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
-
