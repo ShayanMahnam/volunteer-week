@@ -48,12 +48,12 @@ const DragAndDropArea: React.FC = () => {
   };
 
   const cardWidth = 350;
-  const cardHeight = 150;
+  const cardHeight = 350;
 
   return (
     <div
       ref={containerRef}
-      className="relative h-screen w-full border-1 border-black"
+      className="relative  w-full h-screen border-1 border-black"
     >
       {containerWidth === 0 || containerHeight === 0 ? (
         <div>Loading...</div>
