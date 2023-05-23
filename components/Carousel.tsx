@@ -11,7 +11,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/2_cl8bxd.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/1.webp")',
             }}
           ></div>
         </div>
@@ -20,7 +20,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436017/volunteers/10_ppg9rw.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/2.webp")',
             }}
           ></div>
         </div>
@@ -29,7 +29,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/9_fhlnns.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/3.webp")',
             }}
           ></div>
         </div>
@@ -38,7 +38,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/1.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/4.webp")',
             }}
           ></div>
         </div>
@@ -47,7 +47,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/4_fgkfo9.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/5.webp")',
             }}
           ></div>
         </div>
@@ -56,7 +56,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/3_l1rc0l.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/6.webp")',
             }}
           ></div>
         </div>
@@ -65,7 +65,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/5_frpq5o.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/7.webp")',
             }}
           ></div>
         </div>
@@ -74,7 +74,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/11_djbrih.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/8.webp")',
             }}
           ></div>
         </div>
@@ -83,7 +83,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/7_ngtfe9.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/9.webp")',
             }}
           ></div>
         </div>
@@ -92,7 +92,7 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/6_ce55hw.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/10.webp")',
             }}
           ></div>
         </div>
@@ -101,7 +101,61 @@ const Carousel: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684436018/volunteers/8_b5hlzt.webp")',
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/11.webp")',
+            }}
+          ></div>
+        </div>
+        <div className="pb-10 px-3 pt-3 m-6 w-60 h-72 border rounded bg-white shadow-xl -rotate-1">
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage:
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/12.webp")',
+            }}
+          ></div>
+        </div>
+        <div className="pb-10 px-3 pt-3 m-6 w-60 h-72 border rounded bg-white shadow-xl rotate-1">
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage:
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/13.webp")',
+            }}
+          ></div>
+        </div>
+        <div className="pb-10 px-3 pt-3 m-6 w-60 h-72 border rounded bg-white shadow-xl -rotate-1">
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage:
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/14.webp")',
+            }}
+          ></div>
+        </div>
+        <div className="pb-10 px-3 pt-3 m-6 w-60 h-72 border rounded bg-white shadow-xl rotate-1">
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage:
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/15.webp")',
+            }}
+          ></div>
+        </div>
+        <div className="pb-10 px-3 pt-3 m-6 w-60 h-72 border rounded bg-white shadow-xl -rotate-1">
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage:
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/16.webp")',
+            }}
+          ></div>
+        </div>
+        <div className="pb-10 px-3 pt-3 m-6 w-60 h-72 border rounded bg-white shadow-xl rotate-1">
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage:
+                'url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684858361/volunteers/17.webp")',
             }}
           ></div>
         </div>
