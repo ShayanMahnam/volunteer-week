@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #dedede;
+  overflow: hidden;
+  min-height: 250px;
+}
+.board {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://www.publicdomainpictures.net/pictures/30000/velka/cork-board.jpg);
+  background-size: 50%;
+  background-position: center;
+}
+.board:before,
+.board:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: solid 24px #e9e8e8;
+  box-sizing: border-box;
+  box-shadow: inset 0px 1px 3px #9e9399, inset 0px -1px 3px #9e9399;
+}
+.board:after {
+  left: 12px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border: solid 2px #c3cddd;
+  border-radius: 50%;
+}
