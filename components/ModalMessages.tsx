@@ -31,8 +31,9 @@ const ModalMessages: React.FC<ModalMessagesProps> = ({
             <p className="font-bold text-black">{selectedCard.subject}</p>
             <br />
             <br />
-            <p className="text-black">{selectedCard.author}</p>
             <p className="text-black">{selectedCard.content}</p>
+            <br />
+            <p className="text-black text-right">- {selectedCard.author}</p>
           </div>
           <button
             className="close-button absolute top-2 right-2"
