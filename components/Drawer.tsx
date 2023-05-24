@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import cardsData from "../cards.json";
 import ModalMessages from "./ModalMessages";
+import GreenBoard from "./GreenBoard";
 
 const Drawer: React.FC = () => {
   const [selectedCardId, setSelectedCardId] = useState<number | null>(null);
@@ -12,14 +13,20 @@ const Drawer: React.FC = () => {
   return (
     <div className="drawer">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content">
-        <label htmlFor="my-drawer" className="btn btn-primary drawer-button">
+      <div className="drawer-content relative z-0">
+        <label
+          htmlFor="my-drawer"
+          className="absolute top-5 left-5 z-20 btn drawer-button custom-drawer-button"
+        >
           Open drawer
         </label>
+        <div className="absolute top-0 z-10">
+          <GreenBoard />
+        </div>
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+        <ul className="custom-sidebar menu p-4 w-80 bg-base-100 text-base-content">
           {cardsData.map((card) => (
             <li key={card.id} onClick={() => handleItemClick(card.id)}>
               <p>{card.subject}</p>

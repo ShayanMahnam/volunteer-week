@@ -15,6 +15,13 @@ h1 {
   text-align: center;
   color: #fff;
 }
+
+.w-and-h {
+  width: calc(100% - 32px);
+  height: calc(100% - 70px);
+  margin: 16px auto 54px auto;
+}
+
 .card {
   min-width: 350px;
   margin: 0 auto;
@@ -54,27 +61,130 @@ h1 {
 }
 
 .card-bg-green {
-  background: #c1ffd6 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+  background: #c8f4d7 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
 .card-bg-pink {
-  background: #ffddf0 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+  background: #ffe1f3 linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
 .card-bg-yellow {
-  background: #ffe88d linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+  background: #faefbf linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
 .card-bg-blue {
-  background: #b0e4ff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+  background: #c5e9fc linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
 .card-bg-purple {
-  background: #cfc0ff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
+  background: #dacefe linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0
     25px / 100% 30px;
 }
 
+/* drawer */
+.custom-drawer-button {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 20px;
+  color: white;
+  background-color: #064824;
+  border: 1px solid white;
+}
+
+.custom-drawer-button:hover {
+  color: #064824;
+  background-color: white;
+  border: 1px solid #064824;
+}
+
+.custom-sidebar {
+  background-color: #064824;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 25px;
+  color: white;
+}
+
+.custom-sidebar p {
+  padding: 2px;
+}
+
+/* modal message inside sidebar */
+.paper {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 5px 0px #888;
+}
+.paper::before {
+  content: "";
+  position: absolute;
+  left: 45px;
+  height: 100%;
+  width: 2px;
+  background: rgba(255, 0, 0, 0.4);
+}
+.lines {
+  padding-top: 29px;
+  height: 100%;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    white 0px,
+    white 30px,
+    steelblue 31px
+  );
+}
+.text {
+  position: absolute;
+  top: 65px;
+  left: 55px;
+  bottom: 10px;
+  right: 10px;
+  line-height: 31px;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 20px;
+  overflow: hidden;
+  outline: none;
+}
+.holes {
+  position: absolute;
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  background: #064824;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 2px 0px #888;
+}
+.hole-top {
+  top: 10%;
+}
+.hole-middle {
+  top: 50%;
+}
+.hole-bottom {
+  bottom: 10%;
+}
+
+/* close modal messages button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close-icon {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Shadows Into Light", cursive;
+  color: #000;
+}
+
+.close-icon:hover {
+  font-size: 45px;
+  color: #e46d12;
+}

@@ -1,0 +1,101 @@
+.container {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #dedede;
+  overflow: hidden;
+  min-height: 250px;
+}
+.board {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("/media/pictures/cork_board.webp");
+  background-size: 50%;
+  background-position: center;
+}
+.board:before,
+.board:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: solid 24px #e9e8e8;
+  box-sizing: border-box;
+  box-shadow: inset 0px 1px 3px #9e9399, inset 0px -1px 3px #9e9399;
+}
+.board:after {
+  left: 12px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border: solid 2px #c3cddd;
+  border-radius: 50%;
+}
+
+/* card */
+.card-wrapper {
+  width: calc(100% - 80px);
+}
+
+.card-object {
+  display: grid;
+  grid-template:
+    "header header"
+    "aside  main"
+    "foot  foot";
+  font-family: courier;
+  font-size: 16px;
+  line-height: 20px;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+}
+
+.card-object .header {
+  grid-column: header;
+  height: 40px;
+  background-image: url(https://image.ibb.co/b49eUb/dechirure.png);
+  background-repeat: repeat;
+}
+
+.card-object .aside {
+  grid-area: aside;
+  width: 40px;
+  background-image: url(https://image.ibb.co/fpgtpb/trou.png);
+  background-repeat: repeat;
+}
+
+.card-object .main {
+  grid-area: main;
+  background-color: white;
+}
+
+.card-object .main .message {
+  margin: 20px 20px 0 20px;
+}
+
+.card-object .footer {
+  grid-column: foot;
+  background-color: white;
+  padding: 5px 20px 20px 0;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 568px) {
+  .card-object {
+    display: grid;
+    grid-template:
+      "header header"
+      "aside  main"
+      "foot  foot";
+    font-family: courier;
+    font-size: 25px;
+    line-height: 30px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+  }
+}

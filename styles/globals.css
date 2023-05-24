@@ -1,8 +1,231 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|VT323&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   background-image: linear-gradient(to bottom, #f7fafc, #edf2f7);
-  background-image: url("https://res.cloudinary.com/dhfp1rz0p/image/upload/f_auto,q_auto/v1684437038/volunteers/wall-bg_bhwioh.webp");
+  background-image: url("/media/pictures/wall-bg.webp");
+}
+
+.rope {
+  background-image: url("/media/pictures/rope_x3.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 83px;
+}
+
+.section {
+  @media (max-width: 480px) {
+    font-size: 6px;
+  }
+
+  @media (min-width: 480px) and (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+/* body {
+    position: relative;
+    font-size: 1rem;
+    font-family: Roboto;
+    color: black
+} */
+
+/* body:before {
+    position: fixed;
+    z-index: -999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+    content: '';
+} */
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.gutter {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: auto;
+}
+
+.gif-tv {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.gif-tv .viewport {
+  position: absolute;
+  top: 9%;
+  right: 26%;
+  bottom: 15%;
+  left: 7%;
+  background: #161616;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.gif-tv .viewport .video {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gif-tv .viewport .pixels {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.gif-tv .viewport .meta-left {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  padding: 4% 6%;
+}
+
+.gif-tv .viewport .meta-left {
+  align-items: flex-start;
+  left: 0;
+  right: unset;
+}
+
+.gif-tv .viewport span {
+  text-shadow: 0 0 3px #888;
+  font-size: 4rem;
+  font-family: "VT323";
+  color: #e1e1e1;
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+}
+
+.gif-tv .viewport span:not(.active) {
+  display: none;
+}
+
+.gif-tv .viewport span.active {
+  display: block;
+}
+
+.gif-tv button.dial {
+  display: block;
+  position: absolute;
+  left: 85.6%;
+  transform: translateY(-50%);
+  padding: 0;
+  border-radius: 50%;
+  border: #dfddd1 solid 3px;
+  background-color: transparent;
+  width: 10.2%;
+  line-height: 0;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.gif-tv button.dial:hover,
+.gif-tv button.dial:focus {
+  outline: none;
+}
+
+.gif-tv button.dial:hover {
+  border-color: #00aaff;
+}
+
+.gif-tv button.dial:active {
+  border-color: #007fff;
+}
+
+.gif-tv button.dial::before {
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  content: "";
+}
+
+.gif-tv button#gif_tv_button_channel {
+  top: 56.3%;
+}
+
+.gif-tv button.switch {
+  display: block;
+  position: absolute;
+  left: 82.2%;
+  transform: translateY(-50%);
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: #dfddd1;
+  width: 1.6%;
+  line-height: 0;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.gif-tv button.switch:hover,
+.gif-tv button.switch:focus {
+  outline: none;
+  border: none;
+}
+
+.gif-tv button.switch:hover {
+  background-color: #00aaff;
+}
+
+.gif-tv button.switch:active {
+  background-color: #007fff;
+}
+
+.gif-tv button.switch::before {
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  content: "";
+}
+
+.cta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: bottom left;
+  transform: translate(100%, 0) rotate(90deg);
+  text-shadow: 0 2px 8px #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
