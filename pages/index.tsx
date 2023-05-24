@@ -10,7 +10,7 @@ export default function Home() {
       <Billboard />
       <Board />
       <Carousel />
-      <h1 className="text-center">Trainees Messages</h1>
+      <h1 className="text-center text-black">Trainees Messages</h1>
       <Drawer />
     </>
   );
