@@ -14,7 +14,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url("/media/pictures/green_board_2.jpeg");
+  background-image: url("/media/pictures/green_board.webp");
   background-size: 50%;
   background-position: center;
 }
@@ -26,15 +26,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: solid 16px #6d3f00;
+  border: solid 16px #793c00;
   box-sizing: border-box;
-  box-shadow: inset 0px 1px 3px #9e9399, inset 0px -1px 3px #9e9399;
-}
-.green-board:after {
-  left: 12px;
-  top: 4px;
-  width: 16px;
-  height: 16px;
-  border: solid 2px #c3cddd;
-  border-radius: 50%;
+  box-shadow: inset 0px 1px 3px #3f2a17, inset 0px -1px 3px #3f2a17;
 }
