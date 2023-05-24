@@ -12,6 +12,8 @@ const DragAndDropArea: React.FC = () => {
 
   React.useEffect(() => {
     if (containerRef.current) {
+      // setContainerWidth(containerRef.current.offsetWidth - 102);
+      // setContainerHeight(containerRef.current.offsetHeight - 102);
       setContainerWidth(containerRef.current.offsetWidth);
       setContainerHeight(containerRef.current.offsetHeight);
     }
@@ -51,16 +53,16 @@ const DragAndDropArea: React.FC = () => {
   const cardHeight = 350;
 
   return (
-    <div
-      ref={containerRef}
-      className="relative  w-full h-screen border-1 border-black"
-    >
+    <div ref={containerRef} className="relative w-and-h border-1 border-black">
       {containerWidth === 0 || containerHeight === 0 ? (
         <div>Loading...</div>
       ) : (
         cardsData.map((card) => {
           const maxWidth = containerWidth - cardWidth;
+          console.log(maxWidth);
+
           const maxHeight = containerHeight - cardHeight;
+          console.log(maxHeight);
           const x = Math.floor(Math.random() * maxWidth);
           const y = Math.floor(Math.random() * maxHeight);
 
@@ -71,7 +73,7 @@ const DragAndDropArea: React.FC = () => {
                 x,
                 y,
                 width: cardWidth,
-                height: cardHeight,
+                height: "auto",
               }}
               bounds="parent"
               onClick={(event: React.MouseEvent<HTMLDivElement>) =>

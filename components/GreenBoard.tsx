@@ -9,7 +9,7 @@ const GreenBoard = () => {
         <DragAndDropArea />
       </div>
       <Image
-        className="absolute bottom-[14px] left-1/2 transform -translate-x-1/2  z-20 w-2/3 h-auto md:w-1/3"
+        className="absolute bottom-[14px] left-1/2 transform -translate-x-1/2  z-10 w-2/3 h-auto md:w-1/3"
         src="/media/pictures/green_board_part.webp"
         alt="board part"
         width={1000}
