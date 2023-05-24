@@ -25,18 +25,29 @@ const ModalMessages: React.FC<ModalMessagesProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white w-2/3 h-2/3 p-4">
-        <h1 className="text-2xl font-bold text-black">{selectedCard.subject}</h1>
-        <p className="text-black">{selectedCard.author}</p>
-        <p className="text-black">{selectedCard.content}</p>
-        <button className="absolute top-2 right-2 btn btn-primary" onClick={closeModal}>
-          Close
-        </button>
+      <div className="paper h-[550px] w-[250px] sm:w-[350px] md:w-[450px]">
+        <div className="lines bg-white">
+          <div className="text">
+            <p className="font-bold text-black">{selectedCard.subject}</p>
+            <br />
+            <br />
+            <p className="text-black">{selectedCard.author}</p>
+            <p className="text-black">{selectedCard.content}</p>
+          </div>
+          <button
+            className="close-button absolute top-2 right-2"
+            onClick={closeModal}
+          >
+            <span className="close-icon">&times;</span>
+          </button>
+        </div>
+
+        <div className="holes hole-top"></div>
+        <div className="holes hole-middle"></div>
+        <div className="holes hole-bottom"></div>
       </div>
     </div>
   );
 };
 
 export default ModalMessages;
-
-
