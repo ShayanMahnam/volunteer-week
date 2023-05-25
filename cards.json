@@ -2,15 +2,15 @@
   {
     "id": 1,
     "subject": "To all volunteers",
-    "author": "Zobeir",
-    "content": "Dear Volunteers, I wanted to take a moment to extend my deepest appreciation for all the incredible work you do as part of our organization. Your dedication and selflessness make a huge difference, and we are truly grateful for your efforts. Thank you for being amazing volunteers! Warm regards,",
-    "color":"card-bg-white"
+    "author": "Sana Asaf",
+    "content": "The most precious commodities today are time and attention.It is absolutely fantastic to know that you have been able to share these gems with strangers every Saturday or repeatedly throughout your week.It has filled me with hope and positivity for joining tech horizon. Thank you amazing trailblazers🌠",
+    "color": "card-bg-white"
   },
   {
     "id": 2,
     "subject": "To all volunteers",
-    "author": "Sana Asaf",
-    "content": "The most precious commodities today are time and attention.It is absolutely fantastic to know that you have been able to share these gems with strangers every Saturday or repeatedly throughout your week.It has filled me with hope and positivity for joining tech horizon. Thank you amazing trailblazers🌠",
+    "author": "Anonymous",
+    "content": "Thank you for your selfless support and guidance in my coding journey. Your dedication to helping others learn to code is truly admirable, and I am grateful for all the time and effort you've invested in me.",
     "color": "card-bg-green"
   },
   {
@@ -46,20 +46,20 @@
     "subject": "To all volunteers",
     "author": "Marziyeh Azhdari ",
     "content": "Your help and support in learning to code have been invaluable, and I appreciate everything you've done for me.",
-    "color":"card-bg-white"
+    "color": "card-bg-white"
   },
   {
     "id": 8,
-    "subject": "To all volunteers",
-    "author": "Anonymous",
-    "content": "Thank you for your selfless support and guidance in my coding journey. Your dedication to helping others learn to code is truly admirable, and I am grateful for all the time and effort you've invested in me.",
+    "subject": "To Jack",
+    "author": "Shayan",
+    "content": "Dear Jack, You will always be my inspiration to learn new things every day. I'm so grateful to know you, and thank you for everything.",
     "color": "card-bg-green"
   },
-   {
+  {
     "id": 9,
-    "subject": "To Gladwin",
-    "author": "Andriana",
-    "content": "I would like to thank Gladwin for all his help and patience in helping me understand a piece of work when I am completely stuck. He is very encouraging and also willing to help other trainees when asked. I have learnt a lot from him and he is definitely an asset wherever he goes.",
+    "subject": "To Dora",
+    "author": "Shayan",
+    "content": "Dear Dora, Want to say you are amazing person and thank you for all your support",
     "color": "card-bg-pink"
   },
   {
@@ -88,7 +88,7 @@
     "subject": "To all volunteers",
     "author": "Anonymous",
     "content": "Thank you so much for all the cyf volunteer.",
-    "color":"card-bg-white"
+    "color": "card-bg-white"
   },
   {
     "id": 14,
@@ -99,9 +99,9 @@
   },
   {
     "id": 15,
-    "subject": "To JAMES",
-    "author": "Gayle Ngozi",
-    "content": "Thank you so much for all you did and continue to do for the #NinjaCoders! You are awesome.",
+    "subject": "To Christian Gregg",
+    "author": "Shayan",
+    "content": "Dear Christian, I hope you receive this message. If you see it, please come back and teach us. :D You are fabulous!",
     "color": "card-bg-pink"
   },
   {
@@ -130,7 +130,7 @@
     "subject": "To Abdi",
     "author": "Gayle Ngozi",
     "content": "Thank you Abdi, for your constant help and advice. You are the real MVP of DOM!",
-    "color":"card-bg-white"
+    "color": "card-bg-white"
   },
   {
     "id": 20,
@@ -141,7 +141,7 @@
   },
   {
     "id": 21,
-    "subject": "Jemima",
+    "subject": "To Jemima",
     "author": "Gayle Ngozi",
     "content": "Dear Jemima, thank you so much for all the wonderful and invaluable advice and help you gave us during and after PD sessions. You have made such a huge impact in developing our soft skills. We appreciate you. xx",
     "color": "card-bg-pink"
@@ -156,7 +156,7 @@
   {
     "id": 23,
     "subject": "To Clementine",
-   "author": "Gayle Ngozi",
+    "author": "Gayle Ngozi",
     "content": "Thank you for all your contributions towards our studies Clem. And for AWS. You are a star!",
     "color": "card-bg-blue"
   },
@@ -172,11 +172,11 @@
     "subject": "To Jason",
     "author": "Gayle Ngozi",
     "content": "To the Node Master!! Thank you Jason, for everything. You are amazing. ",
-    "color":"card-bg-white"
+    "color": "card-bg-white"
   },
   {
     "id": 26,
-    "subject": "To all HIBAQ",
+    "subject": "To HIBAQ",
     "author": "Gayle Ngozi",
     "content": "For your patience, your quiet smile and selfless attitude, thank you. You will always be an inspiration to me Hibaq.",
     "color": "card-bg-green"
@@ -204,9 +204,9 @@
   },
   {
     "id": 30,
-    "subject": "To Cornelia",
-    "author": "Vitalina",
-    "content": "I wanted to thank you for being my tech volunteer throughout this year. Your commitment, knowledge, and guidance have played a significant role in my development as a software developer. Your willingness to help, share insights, and motivate me has made a world of difference. I'm truly grateful to have had you as my mentor.",
+    "subject": "To Martin",
+    "author": "Shayan",
+    "content": "Dear Martin, VIVA ARGENTINA! It's amazing having you in this course. Thank you so much for all your support.",
     "color": "card-bg-purple"
   },
   {
@@ -214,13 +214,13 @@
     "subject": "To all volunteers",
     "author": "Vitalina",
     "content": "Your commitment, patience, and willingness to share your expertise have been instrumental in helping the participants grow and learn. Thank you for your invaluable contribution!",
-    "color":"card-bg-white"
+    "color": "card-bg-white"
   },
   {
     "id": 32,
-    "subject": "To Pete Lindsell and Andy Saffo",
-    "author": "Karleen",
-    "content": "I'm very much grateful for the support given to me from my Tech and Professional Development Volunteers at Code Your Future, Pete Lindsell and Andy Saffo respectively. They are very motivating and positive individuals who always encouraged me to pursue a career in the tech industry. I have gained a wealth of technical skills and professional knowledge from them both, Thank you Andy and Pete.",
+    "subject": "To Michael",
+    "author": "Shayan",
+    "content": "Dude! What can I say??? You're one of the best and incredible teachers out there. Thank you for all your support azizam!",
     "color": "card-bg-green"
   },
   {
@@ -256,7 +256,7 @@
     "subject": "To James",
     "author": "Khadija",
     "content": "Dear James, Thank you so much for listening to me. You've been an immense help in my tech journey, I couldn't have done it without your support x",
-    "color":"card-bg-white"
+    "color": "card-bg-white"
   },
   {
     "id": 38,
@@ -267,30 +267,87 @@
   },
   {
     "id": 39,
-    "subject": "To all volunteers",
+    "subject": "To Alun",
     "author": "Shayan",
-    "content": "Shayan's message",
+    "content": "Dear Alun, I wanted to express my sincere gratitude for your dedicated volunteer teaching. Learning JavaScript, React, and SQL from you has been incredible. Thank you for your commitment and expertise!",
     "color": "card-bg-pink"
   },
   {
     "id": 40,
-    "subject": "To all volunteers",
+    "subject": "To Barath",
     "author": "Shayan",
-    "content": "Shayan's message",
+    "content": "Dear Barath, You are amazing person and great teacher. Thank you for all you've done for us!",
     "color": "card-bg-yellow"
   },
   {
     "id": 41,
-    "subject": "To all volunteers",
+    "subject": "To Harry",
     "author": "Shayan",
-    "content": "Shayan's message",
+    "content": "Dear Harry, Thank you for being supportive all the time. You are the best",
     "color": "card-bg-blue"
   },
   {
     "id": 42,
-    "subject": "To all volunteers",
-    "author": "Shayan",
-    "content": "Shayan's message",
+    "subject": "To Pete Lindsell and Andy Saffo",
+    "author": "Karleen",
+    "content": "I'm very much grateful for the support given to me from my Tech and Professional Development Volunteers at Code Your Future, Pete Lindsell and Andy Saffo respectively. They are very motivating and positive individuals who always encouraged me to pursue a career in the tech industry. I have gained a wealth of technical skills and professional knowledge from them both, Thank you Andy and Pete.",
     "color": "card-bg-purple"
+  },
+  {
+    "id": 43,
+    "subject": "To Sami",
+    "author": "Shayan",
+    "content": "Sami AZIZAM, it's an honor to know you. You are amazing! Thank you for all your support.",
+    "color": "card-bg-pink"
+  },
+  {
+    "id": 44,
+    "subject": "To Gladwin",
+    "author": "Andriana",
+    "content": "I would like to thank Gladwin for all his help and patience in helping me understand a piece of work when I am completely stuck. He is very encouraging and also willing to help other trainees when asked. I have learnt a lot from him and he is definitely an asset wherever he goes.",
+    "color": "card-bg-green"
+  },
+  {
+    "id": 45,
+    "subject": "To Joe",
+    "author": "Shayan",
+    "content": "Joe, Joe, Joe! You are incredible! An amazing teacher and a fantastic person. Thank you for all your support!",
+    "color": "card-bg-yellow"
+  },
+  {
+    "id": 46,
+    "subject": "To Moe",
+    "author": "Shayan",
+    "content": "Dear Moe, It's difficult to write a short sentence to express how thankful I am for what you did. Thank you 3000 times.",
+    "color": "card-bg-blue"
+  },
+  {
+    "id": 47,
+    "subject": "To Cornelia",
+    "author": "Vitalina",
+    "content": "I wanted to thank you for being my tech volunteer throughout this year. Your commitment, knowledge, and guidance have played a significant role in my development as a software developer. Your willingness to help, share insights, and motivate me has made a world of difference. I'm truly grateful to have had you as my mentor.",
+    "color": "card-bg-purple"
+  },
+  {
+    "id": 48,
+    "subject": "To Karley",
+    "author": "Shayan",
+    "content": "Dear Karley, THANK YOU THANK YOU THANK YOU, You are doing amazing job and we are so lucky to have you in this course.",
+    "color": "card-bg-green"
+  },
+  {
+    "id": 49,
+    "subject": "To all volunteers",
+    "author": "Zobeir",
+    "content": "Dear Volunteers, I wanted to take a moment to extend my deepest appreciation for all the incredible work you do as part of our organization. Your dedication and selflessness make a huge difference, and we are truly grateful for your efforts. Thank you for being amazing volunteers! Warm regards,",
+    "color": "card-bg-yellow"
+  },
+  {
+    "id": 50,
+    "subject": "To JAMES",
+    "author": "Gayle Ngozi",
+    "content": "Thank you so much for all you did and continue to do for the #NinjaCoders! You are awesome.",
+    "color": "card-bg-white"
   }
 ]
+
