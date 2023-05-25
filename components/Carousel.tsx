@@ -9,38 +9,41 @@ const Carousel: React.FC = () => {
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
   ];
 
-  //another rotate 7.25 deg
   return (
-    <div className="relative py-12">
-      <div className="absolute rope top-28"></div>
-      <div className="relative flex items-center overflow-x-hidden">
-        <Marquee>
-          {photoNumber.map((num) => (
-            <div key={num} className="relative w-60 h-96 m-6">
-              <Image
-                className={`absolute top-0 left-1/2 transform -translate-x-1/2 ${
-                  num % 2 === 0 ? "rotate-[-5.67deg]" : "rotate-[7.25deg]"
-                } z-10 w-[100px] h-auto`}
-                src="/media/pictures/Pin.webp"
-                alt="pin"
-                width={100}
-                height={100}
-              />
+    <div className="relative py-48 overflow-x-hidden">
+      <div className="rope-container">
+        <div className="absolute rope top-[6rem]">
+          <img src="/media/pictures/rope_x3.webp" alt="Rope" />
+          <img src="/media/pictures/rope_x3.webp" alt="Rope" />
+        </div>
+      </div>
+      <Marquee>
+        {photoNumber.map((num) => (
+          <div key={num} className="relative w-60 h-96 m-6">
+            <Image
+              className={`absolute top-0 left-1/2 transform -translate-x-1/2 ${
+                num % 2 === 0 ? "rotate-[-5.67deg]" : "rotate-[7.25deg]"
+              } z-10 w-[100px] h-auto`}
+              src="/media/pictures/Pin.webp"
+              alt="pin"
+              width={100}
+              height={100}
+            />
+            <div
+              className={`absolute z-0 top-[4.5rem] px-3 pt-3 pb-10 w-60 h-72 border rounded bg-white shadow-xl ${
+                num % 2 === 0 ? "rotate-1" : "-rotate-1"
+              }`}
+            >
               <div
-                className={`absolute z-0 top-[4.5rem] px-3 pt-3 pb-10 w-60 h-72 border rounded bg-white shadow-xl ${
-                  num % 2 === 0 ? "rotate-1" : "-rotate-1"
-                }`}
-              >
-                <div
-                  className="w-full h-full bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(/media/photos/Photo_${num}.webp)`,
-                  }}
-                ></div>
-              </div>
+                className="w-full h-full bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(/media/photos/Photo_${num}.webp)`,
+                }}
+              ></div>
             </div>
-          ))}
-          {/* <div className="relative w-60 h-96">
+          </div>
+        ))}
+        {/* <div className="relative w-60 h-96">
             <img
               className="absolute top-0 left-1/2 transform -translate-x-1/2 rotate-[-5.67deg] z-10 w-[100px] h-auto"
               src="/media/img/Photo_pin.webp"
@@ -146,8 +149,7 @@ const Carousel: React.FC = () => {
               }}
             ></div>
           </div> */}
-        </Marquee>
-      </div>
+      </Marquee>
     </div>
   );
 };
