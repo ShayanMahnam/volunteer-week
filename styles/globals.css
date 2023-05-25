@@ -9,15 +9,33 @@ body {
   background-image: url("/media/pictures/wall-bg.webp");
 }
 
-.rope {
-  background-image: url("/media/pictures/rope_x3.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 83px;
+/* rope in carousel */
+.rope-container {
+  position: relative;
 }
 
+.rope {
+  position: absolute;
+  animation: ropeMove 40s linear infinite;
+  display: flex;
+}
+
+.rope img {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes ropeMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* tv */
 .section {
   @media (max-width: 480px) {
     font-size: 6px;
