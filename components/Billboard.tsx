@@ -7,6 +7,7 @@ const Billboard: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const gifTVURLs = [
+    "https://media.giphy.com/media/9TTBZN4K3vIhj8N7Yw/giphy-downsized-large.gif",
     "https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571117878/trippy-square_jqupb3.gif",
     "https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571117878/space-stallions_zmueag.gif",
     "https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571117882/dancing-bears-small_v4oqvi.gif",
@@ -44,6 +45,7 @@ const Billboard: React.FC = () => {
               className="video"
               src={gifTVURLs[currentChannel]}
               alt="shows"
+              
             />
             <div
               id="gif_tv_pixels"
@@ -76,7 +78,7 @@ const Billboard: React.FC = () => {
             title="Change the Channels"
             onClick={changeChannel}
           ></button>
-          <span className="cta">Push the Button To find Trainees Video!</span>
+          <span className="cta">Push the Button To find Trainees Videos!</span>
         </div>
       </div>
       <audio
