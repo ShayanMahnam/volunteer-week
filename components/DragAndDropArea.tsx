@@ -49,7 +49,13 @@ const DragAndDropArea: React.FC = () => {
     setSelectedCard(null);
   };
 
-  const cardWidth = 350;
+  const cardWidth = React.useMemo(() => {
+    if (containerWidth <= 768) {
+      return 300; // Set the desired width for mobile devices
+    }
+    return 450; // Set the default width for other screen sizes
+  }, [containerWidth]);
+
   const cardHeight = 350;
 
   return (
@@ -59,10 +65,10 @@ const DragAndDropArea: React.FC = () => {
       ) : (
         cardsData.map((card) => {
           const maxWidth = containerWidth - cardWidth;
-          console.log(maxWidth);
+        
 
           const maxHeight = containerHeight - cardHeight;
-          console.log(maxHeight);
+          
           const x = Math.floor(Math.random() * maxWidth);
           const y = Math.floor(Math.random() * maxHeight);
 

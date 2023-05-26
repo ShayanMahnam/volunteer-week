@@ -10,6 +10,10 @@ const Drawer: React.FC = () => {
     setSelectedCardId(cardId);
   };
 
+  const sortedCardsData = cardsData.sort((a, b) =>
+    a.subject.localeCompare(b.subject)
+  );
+
   return (
     <div className="drawer">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
@@ -27,8 +31,12 @@ const Drawer: React.FC = () => {
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
         <ul className="custom-sidebar menu p-4 w-80 bg-base-100 text-base-content ">
-          {cardsData.map((card) => (
-            <li className="hover:text-black" key={card.id} onClick={() => handleItemClick(card.id)}>
+          {sortedCardsData.map((card) => (
+            <li
+              className="hover:text-black"
+              key={card.id}
+              onClick={() => handleItemClick(card.id)}
+            >
               <p>{card.subject}</p>
             </li>
           ))}
