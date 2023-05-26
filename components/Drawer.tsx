@@ -26,9 +26,9 @@ const Drawer: React.FC = () => {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
-        <ul className="custom-sidebar menu p-4 w-80 bg-base-100 text-base-content">
+        <ul className="custom-sidebar menu p-4 w-80 bg-base-100 text-base-content ">
           {cardsData.map((card) => (
-            <li key={card.id} onClick={() => handleItemClick(card.id)}>
+            <li className="hover:text-black" key={card.id} onClick={() => handleItemClick(card.id)}>
               <p>{card.subject}</p>
             </li>
           ))}
