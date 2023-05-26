@@ -8,12 +8,13 @@ const Billboard: React.FC = () => {
 
   const gifTVURLs = [
     "/media/pictures/Text.webp",
-    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzQ5YzZmN2E0ODI5ZWQ3NTJiZjY5NWU4NjBiM2FmYmZhZjQ4NzYzNiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/qeefB5DIiNVjzt3gx1/giphy.gif",
+    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmRiYWM0NmUxMzgyNTdhM2U0YTI3ZDUwOGZjYTI3NGUzZTM5Zjg2YyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/4RVbQLs5vuQHGd6AyT/giphy.gif",
     "https://media.giphy.com/media/9TTBZN4K3vIhj8N7Yw/giphy-downsized-large.gif",
     "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGIzNzQwMmExZGQ0MTBkNTRlZWI2MzA2N2M2Y2VhNGRlNjA0YzQyOSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/XXUwCCGsSm3rIN85m9/giphy.gif",
     "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTlkNDZjM2FiNGJjNTBiMTA3ZmNiMWRhMjlmODAwNGRlZDE4NjU4NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/eCND9RUy52RchilBDA/giphy.gif",
     "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGVlODhiMGJjMDA0ODFkZTcyYjljNWQ4ZTExYjY3ZjdmMTlhMjM0MCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/m5lHOjwKidj5fj0FZj/giphy.gif",
     "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODBiMGE5NjRmYzU0ZGNkNmY2OGMxN2YwYmFlOTJlNTVmNTc3NzBlZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/BPohUTgMLU5KpQZfDR/giphy.gif",
+    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjZlZWVmNTVjYzkxNDhlNjE3N2ZhNTk1NDU0ZWVjMGU4MzgwYmQzNiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/jNCyMq7ZjtVbdVngEB/giphy.gif",
     "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWIzZTdkY2Q4OWYwODE4OWJiM2E4Y2M4OWU5MjQ5YThmNWE2NTI1YSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/4oDhrpVidjNCiHv3Lr/giphy.gif",
     "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTZjOGFjY2FjNTY1YjdjZjlhZmMwOTE4MDZjN2I5MWU0MzE3ZjNkNCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/IiMr4bEuu3gDGEofv3/giphy.gif",
   ];
