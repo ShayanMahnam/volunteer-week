@@ -12,8 +12,6 @@ const DragAndDropArea: React.FC = () => {
 
   React.useEffect(() => {
     if (containerRef.current) {
-      // setContainerWidth(containerRef.current.offsetWidth - 102);
-      // setContainerHeight(containerRef.current.offsetHeight - 102);
       setContainerWidth(containerRef.current.offsetWidth);
       setContainerHeight(containerRef.current.offsetHeight);
     }
@@ -30,7 +28,6 @@ const DragAndDropArea: React.FC = () => {
     clickedCard.style.zIndex = newZIndex.toString();
 
     if (selectedCard === index) {
-      // if the same card is clicked twice, unselect it
       setSelectedCard(null);
     } else {
       setSelectedCard(index);
@@ -49,12 +46,14 @@ const DragAndDropArea: React.FC = () => {
     setSelectedCard(null);
   };
 
+  const isMobile = containerWidth <= 768;
+
   const cardWidth = React.useMemo(() => {
-    if (containerWidth <= 768) {
+    if (isMobile) {
       return 300; // Set the desired width for mobile devices
     }
     return 450; // Set the default width for other screen sizes
-  }, [containerWidth]);
+  }, [isMobile]);
 
   const cardHeight = 350;
 
@@ -65,10 +64,7 @@ const DragAndDropArea: React.FC = () => {
       ) : (
         cardsData.map((card) => {
           const maxWidth = containerWidth - cardWidth;
-        
-
           const maxHeight = containerHeight - cardHeight;
-          
           const x = Math.floor(Math.random() * maxWidth);
           const y = Math.floor(Math.random() * maxHeight);
 
@@ -81,7 +77,7 @@ const DragAndDropArea: React.FC = () => {
                 width: cardWidth,
                 height: "auto",
               }}
-              bounds="parent"
+              bounds={isMobile ? undefined : "parent"}
               onClick={(event: React.MouseEvent<HTMLDivElement>) =>
                 handleCardClick(event, card.id)
               }
