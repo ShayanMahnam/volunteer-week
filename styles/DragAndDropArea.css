@@ -147,7 +147,7 @@ h1 {
   line-height: 31px;
   font-family: "Shadows Into Light", cursive;
   font-size: 20px;
-  overflow: hidden;
+  overflow: scroll;
   outline: none;
 }
 .holes {
