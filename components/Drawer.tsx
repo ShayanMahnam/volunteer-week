@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cardsData from "../cards.json";
-import ModalMessages from "./ModalMessages";
+import DrawerModalMessage from "./DrawerModalMessage";
 import GreenBoard from "./GreenBoard";
 
 const Drawer: React.FC = () => {
@@ -45,7 +45,7 @@ const Drawer: React.FC = () => {
 
       {/* Modal */}
       {selectedCardId !== null && (
-        <ModalMessages
+        <DrawerModalMessage
           cardId={selectedCardId}
           closeModal={() => setSelectedCardId(null)}
         />

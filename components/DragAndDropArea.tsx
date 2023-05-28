@@ -2,6 +2,7 @@ import React from "react";
 import { Rnd } from "react-rnd";
 import cardsData from "../cards.json";
 import { DraggableEvent } from "react-draggable";
+import BoardModalMessage from "./BoardModalMessage";
 
 const DragAndDropArea: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
@@ -9,7 +10,9 @@ const DragAndDropArea: React.FC = () => {
   const [containerHeight, setContainerHeight] = React.useState(0);
   const [selectedCard, setSelectedCard] = React.useState<number | null>(null);
   const [maxZIndex, setMaxZIndex] = React.useState(cardsData.length);
-  const [showFullText, setShowFullText] = React.useState(false);
+  const [selectedCardId, setSelectedCardId] = React.useState<number | null>(
+    null
+  );
 
   React.useEffect(() => {
     if (containerRef.current) {
@@ -47,7 +50,9 @@ const DragAndDropArea: React.FC = () => {
     setSelectedCard(null);
   };
 
-  const showFullScreenText = () => {};
+  const handleItemClick = (cardId: number) => {
+    setSelectedCardId(cardId);
+  };
 
   const cardWidth = 350;
   const cardHeight = 350;
@@ -95,19 +100,16 @@ const DragAndDropArea: React.FC = () => {
                   <p>{card.subject}</p>
                   {card.content.length > 100 ? (
                     <>
-                      {showFullText ? (
-                        <p>{card.content}</p>
-                      ) : (
-                        <p>
-                          {card.content.slice(0, 100)}... <br />
-                          <button
-                            className="bg-transparent text-black border px-2 rounded-md border-black hover:bg-black hover:text-white cursor-pointer"
-                            onClick={showFullScreenText}
-                          >
-                            Read More
-                          </button>
-                        </p>
-                      )}
+                      <p>
+                        {card.content.slice(0, 100)}... <br />
+                      </p>
+                      <label
+                        htmlFor="my-modal-3"
+                        className="bg-transparent text-black border px-2 rounded-md border-black hover:bg-black hover:text-white cursor-pointer"
+                        onClick={() => handleItemClick(card.id)}
+                      >
+                        Read more
+                      </label>
                     </>
                   ) : (
                     <p>{card.content}</p>
@@ -119,6 +121,14 @@ const DragAndDropArea: React.FC = () => {
           );
         })
       )}
+
+      {/* Modal */}
+      <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+      <div className="modal">
+        {selectedCardId !== null && (
+          <BoardModalMessage cardId={selectedCardId} />
+        )}
+      </div>
     </div>
   );
 };

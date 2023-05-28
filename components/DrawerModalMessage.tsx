@@ -1,19 +1,12 @@
 import React from "react";
 import cardsData from "../cards.json";
 
-interface Card {
-  id: number;
-  subject: string;
-  author: string;
-  content: string;
-}
-
-interface ModalMessagesProps {
+interface DrawerModalMessageProps {
   cardId: number;
   closeModal: () => void;
 }
 
-const ModalMessages: React.FC<ModalMessagesProps> = ({
+const DrawerModalMessage: React.FC<DrawerModalMessageProps> = ({
   cardId,
   closeModal,
 }) => {
@@ -37,7 +30,7 @@ const ModalMessages: React.FC<ModalMessagesProps> = ({
               <p className="text-black text-right">- {selectedCard.author}</p>
             </div>
             <button
-              className="close-button absolute top-2 right-2"
+              className="close-button absolute top-2 right-2 cursor-pointer"
               onClick={closeModal}
             >
               <span className="close-icon">&times;</span>
@@ -53,4 +46,4 @@ const ModalMessages: React.FC<ModalMessagesProps> = ({
   );
 };
 
-export default ModalMessages;
+export default DrawerModalMessage;
