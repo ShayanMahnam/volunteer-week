@@ -323,9 +323,9 @@
   },
   {
     "id": 47,
-    "subject": "To Cornelia",
-    "author": "Vitalina",
-    "content": "I wanted to thank you for being my tech volunteer throughout this year. Your commitment, knowledge, and guidance have played a significant role in my development as a software developer. Your willingness to help, share insights, and motivate me has made a world of difference. I'm truly grateful to have had you as my mentor.",
+    "subject": "To Fiona",
+    "author": "Hengameh",
+    "content": "Dear Fiona, your unwavering support and availability have been invaluable to me. I am sincerely grateful to have you by my side.",
     "color": "card-bg-purple"
   },
   {
@@ -393,9 +393,9 @@
   },
   {
     "id": 57,
-    "subject": "To Ellie Wintram",
-    "author": "Baz Murphy",
-    "content": "You are exceptionally sefless. It is one of the most difficult qualities to embody. I feel I have learnt something fundamental and meaningful by observing that. On top of that your absolute dedication and reliability are exemplary. You have enabled hundreds of people to meet together, form connections, and build a community spirit by giving up your time. Please take the time to internally recognise and absorb the incredible value in that. I want you to know that all of this is absolutely noticed, deeply appreciated, and respected.",
+    "subject": "To all volunteers",
+    "author": "Hengameh",
+    "content": "You are all great.thanks for all your support.",
     "color": "card-bg-yellow"
   },
   {
@@ -460,6 +460,26 @@
     "author": "Gayle Ngozi",
     "content": "Thank you so much for all you did and continue to do for the #NinjaCoders! You are awesome.",
     "color": "card-bg-white"
+  },
+  {
+    "id": 67,
+    "subject": "To Matt Thomas",
+    "author": "Hengameh",
+    "content": "I just wanted to say a big thank you for being an amazing body and teaching me so much. I really admire the way you explain code by drawing it out, it's been super helpful in understanding how everything works. Have an awesome holiday in the US and enjoy your time off!",
+    "color": "card-bg-green"
+  },
+  {
+    "id": 68,
+    "subject": "To Cornelia",
+    "author": "Vitalina",
+    "content": "I wanted to thank you for being my tech volunteer throughout this year. Your commitment, knowledge, and guidance have played a significant role in my development as a software developer. Your willingness to help, share insights, and motivate me has made a world of difference. I'm truly grateful to have had you as my mentor.",
+    "color": "card-bg-pink"
+  },{
+    "id": 69,
+    "subject": "To Ellie Wintram",
+    "author": "Baz Murphy",
+    "content": "You are exceptionally sefless. It is one of the most difficult qualities to embody. I feel I have learnt something fundamental and meaningful by observing that. On top of that your absolute dedication and reliability are exemplary. You have enabled hundreds of people to meet together, form connections, and build a community spirit by giving up your time. Please take the time to internally recognise and absorb the incredible value in that. I want you to know that all of this is absolutely noticed, deeply appreciated, and respected.",
+    "color": "card-bg-yellow"
   }
 ]
 
