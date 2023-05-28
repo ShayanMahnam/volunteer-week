@@ -13,6 +13,7 @@ const DragAndDropArea: React.FC = () => {
   const [selectedCardId, setSelectedCardId] = React.useState<number | null>(
     null
   );
+  const [modalOpen, setModalOpen] = React.useState(false); // Updated modalOpen state
 
   React.useEffect(() => {
     if (containerRef.current) {
@@ -31,10 +32,20 @@ const DragAndDropArea: React.FC = () => {
     setMaxZIndex(newZIndex);
     clickedCard.style.zIndex = newZIndex.toString();
 
-    if (selectedCard === index) {
+    // Check if the click is on the "Read more" button
+    const target = event.target as HTMLElement;
+
+    const isReadMoreButton = target.classList.contains("read-more-button");
+    console.log("read more button", isReadMoreButton);
+
+    if (selectedCard === index && !isReadMoreButton) {
       setSelectedCard(null);
     } else {
       setSelectedCard(index);
+    }
+
+    if (isReadMoreButton) {
+      setModalOpen(true); // Update modalOpen state to true when "Read more" is clicked
     }
   };
 
@@ -51,7 +62,9 @@ const DragAndDropArea: React.FC = () => {
   };
 
   const handleItemClick = (cardId: number) => {
+    console.log("button is working");
     setSelectedCardId(cardId);
+    setModalOpen(true); // Update modalOpen state to true when "Read more" is clicked
   };
 
   const cardWidth = 350;
@@ -105,7 +118,8 @@ const DragAndDropArea: React.FC = () => {
                       </p>
                       <label
                         htmlFor="my-modal-3"
-                        className="bg-transparent text-black border px-2 rounded-md border-black hover:bg-black hover:text-white cursor-pointer"
+                        className="read-more-button bg-transparent text-black border px-2 rounded-md border-black hover:bg-black hover:text-white cursor-pointer"
+                        onTouchStart={() => handleItemClick(card.id)}
                         onClick={() => handleItemClick(card.id)}
                       >
                         Read more
@@ -123,12 +137,16 @@ const DragAndDropArea: React.FC = () => {
       )}
 
       {/* Modal */}
-      <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-      <div className="modal">
-        {selectedCardId !== null && (
-          <BoardModalMessage cardId={selectedCardId} />
-        )}
-      </div>
+      {modalOpen && selectedCardId !== null && (
+        <div
+          className={`${modalOpen ? "modal-visible" : "modal-hidden"} modal`}
+        >
+          <BoardModalMessage
+            cardId={selectedCardId}
+            setModalOpen={setModalOpen}
+          />
+        </div>
+      )}
     </div>
   );
 };

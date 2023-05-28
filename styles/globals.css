@@ -232,3 +232,17 @@ img {
   letter-spacing: 1px;
   color: black;
 }
+
+/* for BoardModalMessage */
+
+.modal-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
