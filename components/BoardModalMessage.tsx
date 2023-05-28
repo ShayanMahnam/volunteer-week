@@ -13,7 +13,6 @@ const BoardModalMessage: React.FC<BoardModalMessageProps> = ({
   const selectedCard = cardsData.find((card) => card.id === cardId);
 
   if (!selectedCard) {
-    console.log("selectedCard not found");
     return null;
   }
 
@@ -23,7 +22,7 @@ const BoardModalMessage: React.FC<BoardModalMessageProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="paper h-[550px] w-[250px] sm:w-[350px] md:w-[450px]">
+      <div className="paper h-[90%] w-[90%] md:w-[450px] md:h-[550px]">
         <label
           htmlFor="my-modal-3"
           className="close-icon absolute right-2 top-2 text-white"

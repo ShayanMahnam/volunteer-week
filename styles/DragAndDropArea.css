@@ -185,3 +185,9 @@ h1 {
   font-size: 45px;
   color: #e46d12;
 }
+
+@media (max-height: 750px) {
+  .paper {
+    height: 90% !important;
+  }
+}
