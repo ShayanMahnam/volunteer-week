@@ -9,11 +9,12 @@ const DragAndDropArea: React.FC = () => {
   const [containerHeight, setContainerHeight] = React.useState(0);
   const [selectedCard, setSelectedCard] = React.useState<number | null>(null);
   const [maxZIndex, setMaxZIndex] = React.useState(cardsData.length);
+  const [showFullText, setShowFullText] = React.useState(false);
 
   React.useEffect(() => {
     if (containerRef.current) {
-      setContainerWidth(containerRef.current.offsetWidth);
-      setContainerHeight(containerRef.current.offsetHeight);
+      setContainerWidth(containerRef.current.offsetWidth - 102);
+      setContainerHeight(containerRef.current.offsetHeight - 102);
     }
   }, []);
 
@@ -46,15 +47,9 @@ const DragAndDropArea: React.FC = () => {
     setSelectedCard(null);
   };
 
-  const isMobile = containerWidth <= 768;
+  const showFullScreenText = () => {};
 
-  const cardWidth = React.useMemo(() => {
-    if (isMobile) {
-      return 300; // Set the desired width for mobile devices
-    }
-    return 450; // Set the default width for other screen sizes
-  }, [isMobile]);
-
+  const cardWidth = 350;
   const cardHeight = 350;
 
   return (
@@ -77,7 +72,7 @@ const DragAndDropArea: React.FC = () => {
                 width: cardWidth,
                 height: "auto",
               }}
-              bounds={isMobile ? undefined : "parent"}
+              bounds="parent"
               onClick={(event: React.MouseEvent<HTMLDivElement>) =>
                 handleCardClick(event, card.id)
               }
@@ -98,7 +93,25 @@ const DragAndDropArea: React.FC = () => {
               <div className={`card shadow-xl ${card.color}`}>
                 <div className="card_text">
                   <p>{card.subject}</p>
-                  <p>{card.content}</p>
+                  {card.content.length > 100 ? (
+                    <>
+                      {showFullText ? (
+                        <p>{card.content}</p>
+                      ) : (
+                        <p>
+                          {card.content.slice(0, 100)}... <br />
+                          <button
+                            className="bg-transparent text-black border px-2 rounded-md border-black hover:bg-black hover:text-white cursor-pointer"
+                            onClick={showFullScreenText}
+                          >
+                            Read More
+                          </button>
+                        </p>
+                      )}
+                    </>
+                  ) : (
+                    <p>{card.content}</p>
+                  )}
                   <p className="author">{card.author}</p>
                 </div>
               </div>
