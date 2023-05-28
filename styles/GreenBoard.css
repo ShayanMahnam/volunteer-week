@@ -16,6 +16,14 @@
   background-size: 50%;
   background-position: center;
 }
+
+.green-board-for-part {
+  background-image: url("/media/pictures/green_board_part.webp");
+  background-size: 75%;
+  background-position: bottom 14px center;
+  background-repeat: no-repeat;
+}
+
 .green-board:before,
 .green-board:after {
   content: "";
@@ -27,4 +35,10 @@
   border: solid 16px #793c00;
   box-sizing: border-box;
   box-shadow: inset 0px 1px 3px #3f2a17, inset 0px -1px 3px #3f2a17;
+}
+
+@media (min-width: 768px) {
+  .green-board-for-part {
+    background-size: 33%;
+  }
 }

@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|VT323&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400");
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
 
 @tailwind base;
 @tailwind components;
@@ -229,4 +231,18 @@ img {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: black;
+}
+
+/* for BoardModalMessage */
+
+.modal-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }

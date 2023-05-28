@@ -2,6 +2,7 @@ import React from "react";
 import { Rnd } from "react-rnd";
 import cardsData from "../cards.json";
 import { DraggableEvent } from "react-draggable";
+import BoardModalMessage from "./BoardModalMessage";
 
 const DragAndDropArea: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
@@ -9,11 +10,15 @@ const DragAndDropArea: React.FC = () => {
   const [containerHeight, setContainerHeight] = React.useState(0);
   const [selectedCard, setSelectedCard] = React.useState<number | null>(null);
   const [maxZIndex, setMaxZIndex] = React.useState(cardsData.length);
+  const [selectedCardId, setSelectedCardId] = React.useState<number | null>(
+    null
+  );
+  const [modalOpen, setModalOpen] = React.useState(false); // Updated modalOpen state
 
   React.useEffect(() => {
     if (containerRef.current) {
-      setContainerWidth(containerRef.current.offsetWidth);
-      setContainerHeight(containerRef.current.offsetHeight);
+      setContainerWidth(containerRef.current.offsetWidth - 102);
+      setContainerHeight(containerRef.current.offsetHeight - 102);
     }
   }, []);
 
@@ -27,10 +32,20 @@ const DragAndDropArea: React.FC = () => {
     setMaxZIndex(newZIndex);
     clickedCard.style.zIndex = newZIndex.toString();
 
-    if (selectedCard === index) {
+    // Check if the click is on the "Read more" button
+    const target = event.target as HTMLElement;
+
+    const isReadMoreButton = target.classList.contains("read-more-button");
+    console.log("read more button", isReadMoreButton);
+
+    if (selectedCard === index && !isReadMoreButton) {
       setSelectedCard(null);
     } else {
       setSelectedCard(index);
+    }
+
+    if (isReadMoreButton) {
+      setModalOpen(true); // Update modalOpen state to true when "Read more" is clicked
     }
   };
 
@@ -46,15 +61,13 @@ const DragAndDropArea: React.FC = () => {
     setSelectedCard(null);
   };
 
-  const isMobile = containerWidth <= 768;
+  const handleItemClick = (cardId: number) => {
+    console.log("button is working");
+    setSelectedCardId(cardId);
+    setModalOpen(true); // Update modalOpen state to true when "Read more" is clicked
+  };
 
-  const cardWidth = React.useMemo(() => {
-    if (isMobile) {
-      return 300; // Set the desired width for mobile devices
-    }
-    return 450; // Set the default width for other screen sizes
-  }, [isMobile]);
-
+  const cardWidth = 350;
   const cardHeight = 350;
 
   return (
@@ -77,7 +90,7 @@ const DragAndDropArea: React.FC = () => {
                 width: cardWidth,
                 height: "auto",
               }}
-              bounds={isMobile ? undefined : "parent"}
+              bounds="parent"
               onClick={(event: React.MouseEvent<HTMLDivElement>) =>
                 handleCardClick(event, card.id)
               }
@@ -98,13 +111,41 @@ const DragAndDropArea: React.FC = () => {
               <div className={`card shadow-xl ${card.color}`}>
                 <div className="card_text">
                   <p>{card.subject}</p>
-                  <p>{card.content}</p>
+                  {card.content.length > 100 ? (
+                    <>
+                      <p>
+                        {card.content.slice(0, 100)}... <br />
+                      </p>
+                      <label
+                        htmlFor="my-modal-3"
+                        className="read-more-button bg-transparent text-black border px-2 rounded-md border-black hover:bg-black hover:text-white cursor-pointer"
+                        onTouchStart={() => handleItemClick(card.id)}
+                        onClick={() => handleItemClick(card.id)}
+                      >
+                        Read more
+                      </label>
+                    </>
+                  ) : (
+                    <p>{card.content}</p>
+                  )}
                   <p className="author">{card.author}</p>
                 </div>
               </div>
             </Rnd>
           );
         })
+      )}
+
+      {/* Modal */}
+      {modalOpen && selectedCardId !== null && (
+        <div
+          className={`${modalOpen ? "modal-visible" : "modal-hidden"} modal`}
+        >
+          <BoardModalMessage
+            cardId={selectedCardId}
+            setModalOpen={setModalOpen}
+          />
+        </div>
       )}
     </div>
   );
