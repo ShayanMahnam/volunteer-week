@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Thank you amazing cyf volunteers" />
         <link rel="icon" href="/thanks.svg" />
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
   
