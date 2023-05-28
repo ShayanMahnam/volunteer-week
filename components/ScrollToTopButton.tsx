@@ -31,7 +31,7 @@ const ScrollToTopButton: React.FC = () => {
     <img
       src="/arrow.svg"
       alt="arrow - go up on the page"
-      className="fixed bottom-5 right-5 w-[30px] h-[30px]"
+      className="fixed bottom-5 right-5 w-[30px] h-[30px] cursor-pointer"
       onClick={handleScrollToTop}
     />
   ) : null;
