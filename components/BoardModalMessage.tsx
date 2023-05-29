@@ -33,12 +33,12 @@ const BoardModalMessage: React.FC<BoardModalMessageProps> = ({
         </label>
         <div className="lines bg-white">
           <div className="text">
-            <p className="font-bold text-black">{selectedCard.subject}</p>
+            <p className="font-bold text-black">{`To ${selectedCard.subject}`}</p>
             <br />
             <br />
             <p className="text-black">{selectedCard.content}</p>
             <br />
-            <p className="text-black text-right">- {selectedCard.author}</p>
+            <p className="text-black text-right">{`From ${selectedCard.author}`}</p>
           </div>
         </div>
 

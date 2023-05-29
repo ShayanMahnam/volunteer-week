@@ -1,10 +1,29 @@
 import React from "react";
 import { Rnd } from "react-rnd";
-import cardsData from "../cards.json";
 import { DraggableEvent } from "react-draggable";
 import BoardModalMessage from "./BoardModalMessage";
 
+// import useContext and the CardsDataContext
+import { useContext } from "react";
+import CardsDataContext from "../context/CardsDataContext";
+
 const DragAndDropArea: React.FC = () => {
+  // bring in cardsData and subject from CardsDataContext
+  const { cardsData, subject } = useContext(CardsDataContext);
+
+  // an alogrithm to shuffle (in place) the colours in the array to random indexes
+  const shuffleColours = (array) => {
+    // console.log("shuffleColours function ran...")
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+  // colour keywords from your css stylesheet :
+  const cardBackgroundColours = ["white", "green", "pink", "yellow", "blue", "purple"]
+  // use the above function to randomly shuffle the cardBackgroundColours Array
+  shuffleColours(cardBackgroundColours);
+
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = React.useState(0);
   const [containerHeight, setContainerHeight] = React.useState(0);
@@ -75,7 +94,10 @@ const DragAndDropArea: React.FC = () => {
       {containerWidth === 0 || containerHeight === 0 ? (
         <div>Loading...</div>
       ) : (
-        cardsData.map((card) => {
+        cardsData
+        // if there is a subject, then filter the cards for that subject, otherwise display all the cards
+        .filter((card) => subject ? card.subject === subject : card)
+        .map((card, index) => {
           const maxWidth = containerWidth - cardWidth;
           const maxHeight = containerHeight - cardHeight;
           const x = Math.floor(Math.random() * maxWidth);
@@ -108,9 +130,10 @@ const DragAndDropArea: React.FC = () => {
                 zIndex: card.id,
               }}
             >
-              <div className={`card shadow-xl ${card.color}`}>
+              {/* dynamically and randomly colour the cards trying to avoid repetition of colour */}
+              <div className={`card shadow-xl card-bg-${cardBackgroundColours[index % cardBackgroundColours.length]}`}>
                 <div className="card_text">
-                  <p>{card.subject}</p>
+                  <p>{`To ${card.subject}`}</p>
                   {card.content.length > 100 ? (
                     <>
                       <p>
@@ -128,7 +151,7 @@ const DragAndDropArea: React.FC = () => {
                   ) : (
                     <p>{card.content}</p>
                   )}
-                  <p className="author">{card.author}</p>
+                  <p className="author">{`From ${card.author}`}</p>
                 </div>
               </div>
             </Rnd>
