@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { Rnd } from "react-rnd";
-import cardsData from "../cards.json";
 import { DraggableEvent } from "react-draggable";
 import BoardModalMessage from "./BoardModalMessage";
 
+// import the CardsDataContext
+import { CardsDataContext} from "../context/CardsDataContext";
+
 const DragAndDropArea: React.FC = () => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const [containerWidth, setContainerWidth] = React.useState(0);
-  const [containerHeight, setContainerHeight] = React.useState(0);
-  const [selectedCard, setSelectedCard] = React.useState<number | null>(null);
-  const [maxZIndex, setMaxZIndex] = React.useState(cardsData.length);
-  const [selectedCardId, setSelectedCardId] = React.useState<number | null>(
+
+  // bring in cardsData and setSubject method from CardsDataContext
+  const { cardsData, subject } = useContext(CardsDataContext);
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const [selectedCard, setSelectedCard] = useState<number | null>(null);
+  const [maxZIndex, setMaxZIndex] = useState(cardsData.length);
+  const [selectedCardId, setSelectedCardId] = useState<number | null>(
     null
   );
-  const [modalOpen, setModalOpen] = React.useState(false); // Updated modalOpen state
+  const [modalOpen, setModalOpen] = useState(false); // Updated modalOpen state
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (containerRef.current) {
       setContainerWidth(containerRef.current.offsetWidth - 102);
       setContainerHeight(containerRef.current.offsetHeight - 102);
@@ -75,7 +81,10 @@ const DragAndDropArea: React.FC = () => {
       {containerWidth === 0 || containerHeight === 0 ? (
         <div>Loading...</div>
       ) : (
-        cardsData.map((card) => {
+        cardsData
+        // if there is a subject, then filter the cards for that subject, otherwise display all the cards
+        .filter((card: any) => subject ? card.subject === subject : card)
+        .map((card: any) => {
           const maxWidth = containerWidth - cardWidth;
           const maxHeight = containerHeight - cardHeight;
           const x = Math.floor(Math.random() * maxWidth);
@@ -110,7 +119,7 @@ const DragAndDropArea: React.FC = () => {
             >
               <div className={`card shadow-xl ${card.color}`}>
                 <div className="card_text">
-                  <p>{card.subject}</p>
+                  <p>{`To ${card.subject}`}</p>
                   {card.content.length > 100 ? (
                     <>
                       <p>
@@ -128,7 +137,7 @@ const DragAndDropArea: React.FC = () => {
                   ) : (
                     <p>{card.content}</p>
                   )}
-                  <p className="author">{card.author}</p>
+                  <p className="author">{`From ${card.author}`}</p>
                 </div>
               </div>
             </Rnd>

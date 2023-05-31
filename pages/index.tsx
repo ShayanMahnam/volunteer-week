@@ -4,6 +4,9 @@ import Board from "@/components/Board";
 import Billboard from "@/components/Billboard";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 
+// import the Context Provider and wrap the Drawer Component
+import { CardsDataContextProvider } from "@/context/CardsDataContext";
+
 export default function Home() {
   return (
     <>
@@ -11,7 +14,10 @@ export default function Home() {
       <Board />
       <Carousel />
       <h1 className="text-center text-black">Trainees Messages</h1>
-      <Drawer />
+      {/* Wrap the Drawer in the CardsData Context Provider */}
+      <CardsDataContextProvider>
+        <Drawer />
+      </CardsDataContextProvider>
       <ScrollToTopButton />
     </>
   );

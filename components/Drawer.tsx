@@ -1,18 +1,32 @@
-import React, { useState } from "react";
-import cardsData from "../cards.json";
-import DrawerModalMessage from "./DrawerModalMessage";
+import React from "react";
+// import useContext and the CardsDataContext
+import { useContext } from "react";
+import { CardsDataContext } from "../context/CardsDataContext";
+// (!) this component is no longer neccessary:
+// import DrawerModalMessage from "./DrawerModalMessage";
 import GreenBoard from "./GreenBoard";
 
 const Drawer: React.FC = () => {
-  const [selectedCardId, setSelectedCardId] = useState<number | null>(null);
 
-  const handleItemClick = (cardId: number) => {
-    setSelectedCardId(cardId);
-  };
+  // bring in cardsData and setSubject method from CardsDataContext
+  const { cardsData, setSubject} = useContext(CardsDataContext);
 
-  const sortedCardsData = cardsData.sort((a, b) =>
-    a.subject.localeCompare(b.subject)
-  );
+  // this extracts all the unique subjects from the cardsData, and arranges them with a Reset option (1st), All The Volunteers (2nd), followed by an Alphabetical List of Volunteers
+  const uniqueSubjects = [
+        "Reset",
+        "All The Volunteers",
+        ...Array.from(
+          new Set(
+            cardsData
+              .filter((obj) => obj.subject !== "All The Volunteers")
+              .map((obj) => obj.subject)
+              .sort((a, b) => a.localeCompare(b))
+          )
+        ),
+      ];
+
+  // if "Reset" is clicked, make the subject "", otherwise set the Subject to the clicked subject (Volunteer Name)
+  const handleListItemClick = (subject: string) => subject === "Reset" ? setSubject("") : setSubject(subject);
 
   return (
     <div className="drawer">
@@ -31,25 +45,17 @@ const Drawer: React.FC = () => {
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
         <ul className="custom-sidebar menu p-4 w-80 bg-base-100 text-base-content ">
-          {sortedCardsData.map((card) => (
+          {uniqueSubjects.map((subject, index) => (
             <li
               className="hover:text-black"
-              key={card.id}
-              onClick={() => handleItemClick(card.id)}
+              key={index}
+              onClick={() => handleListItemClick(subject)}
             >
-              <p>{card.subject}</p>
+              <p>{subject}</p>
             </li>
           ))}
         </ul>
       </div>
-
-      {/* Modal */}
-      {selectedCardId !== null && (
-        <DrawerModalMessage
-          cardId={selectedCardId}
-          closeModal={() => setSelectedCardId(null)}
-        />
-      )}
     </div>
   );
 };
