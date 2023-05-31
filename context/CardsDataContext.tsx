@@ -18,7 +18,9 @@ interface CardsDataContextProviderProps {
   children: ReactNode;
 }
 
-export const CardsDataContext = createContext<CardsDataContextType>(null);
+export const CardsDataContext = createContext<CardsDataContextType>(
+  {} as CardsDataContextType
+);
 
 export const CardsDataContextProvider: React.FC<CardsDataContextProviderProps> = ({ children }) => {
 
