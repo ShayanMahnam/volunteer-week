@@ -437,7 +437,8 @@
      "id":63,
      "subject":"Joshua Dysiewicz",
      "author":"Farzaneh",
-     "content":"Thank you so much for your consistent and invaluable assistance in reviewing my code on every pull request I've made. Your dedication and commitment to helping me improve as a developer have been invaluable, and I am incredibly grateful for your support."
+     "content":"Thank you so much for your consistent and invaluable assistance in reviewing my code on every pull request I've made. Your dedication and commitment to helping me improve as a developer have been invaluable, and I am incredibly grateful for your support.",
+     "color": "card-bg-yellow"
   },
   {
      "id":64,
