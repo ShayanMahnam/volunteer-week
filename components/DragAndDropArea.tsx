@@ -1,27 +1,27 @@
-import React from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { Rnd } from "react-rnd";
 import { DraggableEvent } from "react-draggable";
 import BoardModalMessage from "./BoardModalMessage";
 
-// import useContext and the CardsDataContext
-import { useContext } from "react";
-import CardsDataContext from "../context/CardsDataContext";
+// import the CardsDataContext
+import { CardsDataContext} from "../context/CardsDataContext";
 
 const DragAndDropArea: React.FC = () => {
-  // bring in cardsData and subject from CardsDataContext
+
+  // bring in cardsData and setSubject method from CardsDataContext
   const { cardsData, subject } = useContext(CardsDataContext);
 
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const [containerWidth, setContainerWidth] = React.useState(0);
-  const [containerHeight, setContainerHeight] = React.useState(0);
-  const [selectedCard, setSelectedCard] = React.useState<number | null>(null);
-  const [maxZIndex, setMaxZIndex] = React.useState(cardsData.length);
-  const [selectedCardId, setSelectedCardId] = React.useState<number | null>(
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const [selectedCard, setSelectedCard] = useState<number | null>(null);
+  const [maxZIndex, setMaxZIndex] = useState(cardsData.length);
+  const [selectedCardId, setSelectedCardId] = useState<number | null>(
     null
   );
-  const [modalOpen, setModalOpen] = React.useState(false); // Updated modalOpen state
+  const [modalOpen, setModalOpen] = useState(false); // Updated modalOpen state
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (containerRef.current) {
       setContainerWidth(containerRef.current.offsetWidth - 102);
       setContainerHeight(containerRef.current.offsetHeight - 102);
@@ -83,8 +83,8 @@ const DragAndDropArea: React.FC = () => {
       ) : (
         cardsData
         // if there is a subject, then filter the cards for that subject, otherwise display all the cards
-        .filter((card) => subject ? card.subject === subject : card)
-        .map((card) => {
+        .filter((card: any) => subject ? card.subject === subject : card)
+        .map((card: any) => {
           const maxWidth = containerWidth - cardWidth;
           const maxHeight = containerHeight - cardHeight;
           const x = Math.floor(Math.random() * maxWidth);

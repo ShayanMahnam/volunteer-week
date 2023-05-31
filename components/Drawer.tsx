@@ -1,20 +1,32 @@
 import React from "react";
 // import useContext and the CardsDataContext
 import { useContext } from "react";
-import CardsDataContext from "../context/CardsDataContext";
+import { CardsDataContext } from "../context/CardsDataContext";
 // (!) this component is no longer neccessary:
 // import DrawerModalMessage from "./DrawerModalMessage";
 import GreenBoard from "./GreenBoard";
 
 const Drawer: React.FC = () => {
+
   // bring in cardsData and setSubject method from CardsDataContext
-  const { cardsData, setSubject } = useContext(CardsDataContext);
+  const { cardsData, setSubject} = useContext(CardsDataContext);
 
   // this extracts all the unique subjects from the cardsData, and arranges them with a Reset option (1st), All The Volunteers (2nd), followed by an Alphabetical List of Volunteers
-  const uniqueSubjects = ["Reset", "All The Volunteers", ...Array.from(new Set(cardsData.filter(obj => obj.subject !== "All The Volunteers").map(obj => obj.subject).sort((a, b) => a.localeCompare(b))))];
+  const uniqueSubjects = [
+        "Reset",
+        "All The Volunteers",
+        ...Array.from(
+          new Set(
+            cardsData
+              .filter((obj) => obj.subject !== "All The Volunteers")
+              .map((obj) => obj.subject)
+              .sort((a, b) => a.localeCompare(b))
+          )
+        ),
+      ];
 
   // if "Reset" is clicked, make the subject "", otherwise set the Subject to the clicked subject (Volunteer Name)
-  const handleListItemClick = (subject) => subject === "Reset" ? setSubject("") : setSubject(subject);
+  const handleListItemClick = (subject: string) => subject === "Reset" ? setSubject("") : setSubject(subject);
 
   return (
     <div className="drawer">

@@ -5,7 +5,7 @@ import Billboard from "@/components/Billboard";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 // import the Context Provider and wrap the Drawer Component
-import CardsDataContextProvider from "@/context/CardsDataContextProvider";
+import { CardsDataContextProvider } from "@/context/CardsDataContext";
 
 export default function Home() {
   return (
