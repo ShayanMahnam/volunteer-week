@@ -222,14 +222,15 @@ img {
 }
 
 .cta {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   right: 0;
   transform-origin: bottom left;
-  transform: translate(100%, 0) rotate(90deg);
+  transform: translate(100%, 0) rotate(90deg); */
   text-shadow: 0 2px 8px #999;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
   color: black;
 }
 

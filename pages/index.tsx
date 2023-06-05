@@ -10,6 +10,7 @@ import { CardsDataContextProvider } from "@/context/CardsDataContext";
 export default function Home() {
   return (
     <>
+      <span className="cta text-xs flex justify-center pt-3 md:text-2xl">Push the TV Button To find Trainees Videos!</span>
       <Billboard />
       <Board />
       <Carousel />

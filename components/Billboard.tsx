@@ -80,7 +80,7 @@ const Billboard: React.FC = () => {
             title="Change the Channels"
             onClick={changeChannel}
           ></button>
-          <span className="cta">Push the Button To find Trainees Videos!</span>
+          
         </div>
       </div>
       <audio
